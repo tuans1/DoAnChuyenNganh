@@ -1,16 +1,129 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p{
+    margin:0;
+    padding:0;
+}
+.trigger {
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 64px;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.trigger:hover {
+    color: #1890ff;
 }
 
-* {
-  box-sizing: border-box;
+.logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.ant-layout-header{
+    width: 87%;
+    background: #1890ff !important;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-15{
+    font-size: 15px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.triangle{
+    position: absolute;
+    top: -10px;
+    right: 17px;
+    height: 18px;
+    width: 18px;
+    border-radius: 3px 0px 0px 0px;
+    transform: rotate(45deg);
+    background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+/* =========TASK============== */
+/* straight timeline color */
+.ant-timeline-item-tail {
+    border-left: 2px solid rgb(248, 169, 169) !important;
+}
+
+.ant-card-body {
+    padding: 10px !important;
+}
+
+.timeline__comment {
+    border:1px solid red;
+    border-radius: 5px;
+    width: 100%;
+    height: 100px;
+    margin-left: -50px;
+    background-color: #fff;
+    /* z-index: 999; */
+}
+.collapse__replies{
+    width: 100%;
+    height: 100px;
+}
+.ant-collapse {
+    width: 97.3% !important;
+    margin-left: -21px !important;
+}
+/* remove bg tag */
+.ant-timeline-item-head{
+    background-color: transparent !important;
+}
+
+/* editor height */
+.ck-editor__editable {
+    min-height: 200px !important;
+    line-height: 10px;
+}
+/* rewrite image position */
+.ant-image-preview-img{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+.timeline-icon > .ant-timeline-item-head-custom > span{
+    padding: 6px 7px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.timeline-icon > .ant-timeline-item-head-custom > span > svg{
+    font-size: 17px;
+}
+
+/* ============CHAT============ */
+.user{
+    border-bottom: 1px solid  #ebebeb;
+}
+.pd-left{
+    padding-top: 1rem/* 16px */;
+    padding-left: 2rem/* 32px */;
+    padding-right: 2rem/* 32px */;
+}
+.left__user::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+	background-color: #F5F5F5;
+}
+
+.left__user::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: white;
+}
+
+.left__user::-webkit-scrollbar-thumb
+{
+	background-color: #b8b8b8;
 }
